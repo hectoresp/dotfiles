@@ -12,43 +12,37 @@ powerline = {
     ]
 }
 
-base_colors = lambda fg="text", bg="background": {
+base_colors = lambda fg="soft_blue", bg="dark_blue": {
     "foreground":colors[fg],
     "background":colors[bg]
 }
-
-widget_defaults = dict(
-    font='UbuntuMono Nerd Font',
-    fontsize=16,
-    padding=3,
-    foreground=colors["text"],
-)
-extension_defaults = widget_defaults.copy()
 
 main_widgets = (
     widget.GroupBox(
         fontsize=19,
         padding=5,
         highlight_method = 'line',
-        highlight_color = colors["light_background"],
-        this_current_screen_border = colors["yellow"],
-        this_screen_border = colors["light_background"],
-        other_current_screen_border = colors["yellow"],
-        other_screen_border = colors["light_background"],
-        active=colors["text"],
+        highlight_color = colors["soft_blue"],
+        this_current_screen_border = colors["soft_blue2"],
+        this_screen_border = colors["soft_blue2"],
+        other_current_screen_border = colors["soft_blue2"],
+        other_screen_border = colors["soft_blue2"],
+        active=colors["soft_blue2"],
         inactive=colors["inactive_text"],
     ),
 
-    widget.WindowName(**powerline),
+    widget.WindowName(font='UbuntuMono Nerd Font Bold', **powerline),
 )
 
 secondary_widgets = (
-    widget.Backlight(
-        **base_colors("yellow", "inactive_text"),
-        backlight_name="radeon_bl0",
-        format = "  {percent:2.0%}",
-        **powerline
-    ),
+    widget.Systray(**powerline),
+
+    # widget.Backlight(
+    #     **base_colors("yellow", "inactive_text"),
+    #     backlight_name="radeon_bl0",
+    #     format = "  {percent:2.0%}",
+    #     **powerline
+    # ),
 
     widget.Bluetooth(
         **base_colors("blue"),
@@ -59,17 +53,21 @@ secondary_widgets = (
         **powerline
     ),  
 
-    widget.Systray(
-        **base_colors("text", "inactive_text"),
-        **powerline,
+    widget.CPU(
+        **base_colors("black","orange"),
+        format = "  {load_percent}%",
+        **powerline
     ),
 
-    widget.CurrentLayoutIcon(scale = 0.6),
-    widget.CurrentLayout(**powerline),
+    widget.CurrentLayout(
+        **base_colors("black","yellow"),
+        font='UbuntuMono Nerd Font Bold',
+        **powerline
+        ),
 
     widget.Clock(
-        **base_colors("text", "inactive_text"),
-        format="%d %B %Y %H:%M",
+        **base_colors("black", "red"),
+        format="  %d %B %Y %H:%M",
     ),
 )
 

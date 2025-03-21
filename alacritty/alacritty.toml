@@ -1,0 +1,21 @@
+
+[window]
+opacity = 0.9
+
+[colors.primary]
+background = "#160f26"
+
+[font]
+size = 12
+
+[font.bold]
+family = "GeistMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "GeistMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "GeistMono Nerd Font"
+style = "Regular"

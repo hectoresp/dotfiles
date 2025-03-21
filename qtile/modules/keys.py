@@ -2,7 +2,7 @@ from libqtile.lazy import lazy
 from libqtile.config import Key
 
 mod = "mod4"
-terminal = "kitty"
+terminal = "alacritty"
 web_browser = "zen-browser"
 explorer = "thunar"
 code_editor = "code"
@@ -47,7 +47,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "Return", lazy.spawn(terminal)),
 
     # Menu / Launcher
-    ([mod], "m", lazy.spawn("rofi -show run")),
+    ([mod], "m", lazy.spawn("rofi -show drun")),
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
 
     # Web browser

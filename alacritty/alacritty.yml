@@ -1,0 +1,13 @@
+background_opacity: 0.9  # Ajusta el valor (0.0 es completamente transparente, 1.0 es opaco)
+
+font:
+  normal:
+    family: "GeistMono Nerd Font"  # Cambia esto por la fuente que prefieras
+    style: "Regular"
+  bold:
+    family: "GeistMono Nerd Font"
+    style: "Bold"
+  italic:
+    family: "GeistMono Nerd Font"
+    style: "Italic"
+  size: 12  # Ajusta el tamaño según prefieras

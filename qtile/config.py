@@ -17,10 +17,11 @@ mouse = [
 ]
 
 widget_defaults = dict(
-    font='UbuntuMono Nerd Font',
-    fontsize=16,
+    font='UbuntuMono Nerd Font Bold',
+    fontsize=17,
     padding=3,
-    foreground=colors["text"],
+    foreground=colors["soft_blue2"],
+
 )
 extension_defaults = widget_defaults.copy()
 

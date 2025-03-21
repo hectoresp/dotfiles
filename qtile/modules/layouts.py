@@ -4,8 +4,10 @@ from .colors import colors
 
 layouts = [
     layout.MonadTall(
-        border_focus=colors["text"],
-        border_width=2
+        border_focus=colors["soft_blue2"],
+        border_normal=colors["dark_blue2"],
+        border_width=2,
+        margin=7,
     ),
     layout.Columns(),
     layout.Max(),

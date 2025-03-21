@@ -2,7 +2,7 @@ from libqtile import widget, bar
 from libqtile.config import Screen
 from libqtile.lazy import lazy
 from .colors import colors
-from .widgets import main_widgets, secondary_widgets, widget_defaults
+from .widgets import main_widgets, secondary_widgets
 
 # screens = [Screen(top=bar.Bar(
 #     [*widgets],
@@ -17,7 +17,7 @@ screens = [
             [*main_widgets, *secondary_widgets],
             30,
             opacity=0.95,
-            background=colors["background"]
+            background=colors["dark_blue"],
         )
     ),
     Screen(
@@ -25,7 +25,7 @@ screens = [
             [*main_widgets],
             30,
             opacity=0.95,
-            background=colors["background"]
+            background=colors["dark_blue"]
         )
     ),
 ]
