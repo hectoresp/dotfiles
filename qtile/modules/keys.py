@@ -69,5 +69,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Brightness shortcuts
     ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-    ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-"))
+    ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+
+    # Change keyboard layout
+    ([mod], 'space', lazy.widget["keyboardlayout"].next_keyboard()),
 ]]

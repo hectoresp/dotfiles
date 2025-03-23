@@ -25,5 +25,6 @@ floating_layout = layout.Floating(
         
         Match(wm_class="blueman-manager"), # Bluetooth GUI Manager
         Match(wm_class="nm-connection-editor"), # Network Manager GUI
+        Match(wm_class="pavucontrol"), # Pulseaudio volume control
     ]
 )

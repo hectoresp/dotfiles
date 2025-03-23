@@ -30,16 +30,28 @@ main_widgets = (
         active=colors["soft_blue2"],
         inactive=colors["inactive_text"],
     ),
-
+    widget.CurrentLayout(
+        font='UbuntuMono Nerd Font Bold',
+        fmt='| {} |',
+        ),
     widget.WindowName(font='UbuntuMono Nerd Font Bold', **powerline),
 )
 
 systray = widget.Systray(**powerline)
 
 secondary_widgets = (
-    widget.Battery(
-        format = "󰂂 {percent:2.0%}",
-        show_short_text = False,
+    widget.KeyboardLayout(
+        configured_keyboards=['es','us'],
+        **powerline,
+    ),
+
+    widget.PulseVolume(
+        **base_colors("black","soft_blue2"),
+        unmute_format="  {volume}%",
+        mute_format="  Muted",
+        mouse_callbacks = {
+            "Button1": lazy.spawn("pavucontrol"),
+        },
         **powerline
     ),
 
@@ -59,17 +71,16 @@ secondary_widgets = (
         **powerline
     ),  
 
-    widget.CPU(
+    widget.Battery(
         **base_colors("black","orange"),
-        format = "  {load_percent}%",
+        charge_char="󰂄",
+        discharge_char="󰂂",
+        full_char="󰁹",
+        update_interval=2,
+        format = "{char} {percent:2.0%}",
+        show_short_text = False,
         **powerline
     ),
-
-    widget.CurrentLayout(
-        **base_colors("black","green"),
-        font='UbuntuMono Nerd Font Bold',
-        **powerline
-        ),
 
     widget.Clock(
         **base_colors("black", "red"),
