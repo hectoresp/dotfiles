@@ -34,18 +34,24 @@ main_widgets = (
     widget.WindowName(font='UbuntuMono Nerd Font Bold', **powerline),
 )
 
-secondary_widgets = (
-    widget.Systray(**powerline),
+systray = widget.Systray(**powerline)
 
-    # widget.Backlight(
-    #     **base_colors("yellow", "inactive_text"),
-    #     backlight_name="radeon_bl0",
-    #     format = "  {percent:2.0%}",
-    #     **powerline
-    # ),
+secondary_widgets = (
+    widget.Battery(
+        format = "󰂂 {percent:2.0%}",
+        show_short_text = False,
+        **powerline
+    ),
+
+    widget.Backlight(
+        **base_colors("black", "yellow"),
+        backlight_name="amdgpu_bl1",
+        format = "  {percent:2.0%}",
+        **powerline
+    ),
 
     widget.Bluetooth(
-        **base_colors("blue"),
+        **base_colors("black", "light_blue"),
         default_text = " {connected_devices}",
         mouse_callbacks = {
             "Button1": lazy.spawn("blueman-manager"),
@@ -60,7 +66,7 @@ secondary_widgets = (
     ),
 
     widget.CurrentLayout(
-        **base_colors("black","yellow"),
+        **base_colors("black","green"),
         font='UbuntuMono Nerd Font Bold',
         **powerline
         ),

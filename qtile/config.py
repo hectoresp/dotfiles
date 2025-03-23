@@ -18,7 +18,7 @@ mouse = [
 
 widget_defaults = dict(
     font='UbuntuMono Nerd Font Bold',
-    fontsize=17,
+    fontsize=19,
     padding=3,
     foreground=colors["soft_blue2"],
 
