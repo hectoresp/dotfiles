@@ -1,0 +1,10 @@
+
+! Escalado general
+Xft.dpi: 148
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+
+! Cursor grande
+Xcursor.size: 28
