@@ -1,0 +1,32 @@
+vim.opt.rtp:prepend("~/.config/nvim/lazy/lazy.nvim")
+
+require("lazy").setup({
+  -- LSP y autocompletado
+  "neovim/nvim-lspconfig",
+  "williamboman/mason.nvim",
+  "williamboman/mason-lspconfig.nvim",
+  "hrsh7th/nvim-cmp",
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-buffer",
+  "hrsh7th/cmp-path",
+  "L3MON4D3/LuaSnip",
+  "saadparwaiz1/cmp_luasnip",
+
+  -- Syntax y árbol
+  "nvim-treesitter/nvim-treesitter",
+  "nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-web-devicons",
+
+  -- UI y estética
+  "nvim-lualine/lualine.nvim",
+  "catppuccin/nvim",
+  "lukas-reineke/indent-blankline.nvim",
+  "lewis6991/gitsigns.nvim",
+
+  -- Búsqueda
+  "nvim-telescope/telescope.nvim",
+  "nvim-lua/plenary.nvim",
+
+  -- Otros
+  "windwp/nvim-autopairs",
+})
